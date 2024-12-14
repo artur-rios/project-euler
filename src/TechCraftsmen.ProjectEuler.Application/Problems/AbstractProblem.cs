@@ -4,7 +4,7 @@ public abstract class AbstractProblem(int index)
 {
     public int Index { get; } = index;
 
-    internal readonly Dictionary<string, Type> ExpectedParameters = [];
+    public readonly Dictionary<string, Type> ExpectedParameters = [];
 
     public abstract object Resolve(Dictionary<string, object> input);
 

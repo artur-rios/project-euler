@@ -26,12 +26,22 @@ public class Program
 
         try
         {
-            Console.WriteLine($"Solution to Problem {index}");
+            Console.WriteLine($"Problem {index}\n");
+            Console.WriteLine("Expected parameters:");
+            PrintExpectedParameters(problem.ExpectedParameters);
             Console.WriteLine($"\n{problem.Resolve(parameters)}");
         }
         catch (Exception e)
         {
             Console.WriteLine($"Error: {e.Message}");
+        }
+    }
+
+    private static void PrintExpectedParameters(Dictionary<string, Type> requiredParameters)
+    {
+        foreach (var parameter in requiredParameters)
+        {
+            Console.WriteLine($"Name: {parameter.Key} | Type: {parameter.Value}");
         }
     }
 }
