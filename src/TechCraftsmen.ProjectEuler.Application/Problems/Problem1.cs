@@ -4,6 +4,8 @@ public class Problem1 : AbstractProblem
 {
     public Problem1(int index): base(index)
     {
+        Title = "Multiples of 3 or 5";
+        Objective = "Find the sum of all the multiples of 3 or 5 below a given limit";
         ExpectedParameters.Add("range", typeof(int));
     }
 
@@ -13,10 +15,10 @@ public class Problem1 : AbstractProblem
 
         var range = (int)(input.GetValueOrDefault("range") ?? throw new ArgumentException("Could not cast parameter \"range\""));
         
-        return SumMultiplesOfThreeAndFive(range);
+        return SumMultiplesOfThreeOrFive(range);
     }
-    
-    private static int SumMultiplesOfThreeAndFive(int range)
+
+    private static int SumMultiplesOfThreeOrFive(int range)
     {
         var sum = 0;
 		

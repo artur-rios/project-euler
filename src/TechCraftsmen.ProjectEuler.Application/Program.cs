@@ -27,13 +27,15 @@ public class Program
         try
         {
             Console.WriteLine($"Problem {index}\n");
+            Console.WriteLine($"{problem.Title}\n");
+            Console.WriteLine($"{problem.Objective}\n");
             Console.WriteLine("Expected parameters:");
             PrintExpectedParameters(problem.ExpectedParameters);
-            Console.WriteLine($"\n{problem.Resolve(parameters)}");
+            Console.WriteLine($"\nAnswer: {problem.Resolve(parameters)}");
         }
         catch (Exception e)
         {
-            Console.WriteLine($"Error: {e.Message}");
+            Console.WriteLine($"\nError: {e.Message}");
         }
     }
 

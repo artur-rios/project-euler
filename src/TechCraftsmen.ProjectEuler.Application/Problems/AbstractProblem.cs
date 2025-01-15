@@ -3,6 +3,8 @@
 public abstract class AbstractProblem(int index)
 {
     public int Index { get; } = index;
+    public string Title { get; set;  }
+    public string Objective { get; set; }
 
     public readonly Dictionary<string, Type> ExpectedParameters = [];
 
