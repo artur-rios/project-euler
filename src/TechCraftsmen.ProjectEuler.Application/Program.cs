@@ -14,6 +14,9 @@ public class Program
         
         // Problem 2
         parameters.Add("limit", 4000000);
+        
+        // Problem 3
+        // parameters.Add("numberToFactor", 600851475143);
 
         var problem = Startup.GetProblemByIndex(index);
 
