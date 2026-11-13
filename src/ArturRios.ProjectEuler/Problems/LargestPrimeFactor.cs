@@ -1,6 +1,6 @@
 ﻿namespace ArturRios.ProjectEuler.Problems;
 
-public static class LargestPrimeFactor 
+public static class LargestPrimeFactor
 {
     /*
      * https://projecteuler.net/problem=3

@@ -12,7 +12,7 @@ public class LargestPrimeFactorTests
         const long expected = 2L;
 
         var result = LargestPrimeFactor.Solution(number);
-        
+
         Assert.Equal(expected, result);
     }
 
@@ -21,9 +21,9 @@ public class LargestPrimeFactorTests
     {
         const int number = 17;
         const long expected = 17L;
-        
+
         var result = LargestPrimeFactor.Solution(number);
-        
+
         Assert.Equal(expected, result);
     }
 
@@ -32,9 +32,9 @@ public class LargestPrimeFactorTests
     {
         const int number = 10;
         const long expected = 5L;
-        
+
         var result = LargestPrimeFactor.Solution(number);
-        
+
         Assert.Equal(expected, result);
     }
 
@@ -43,9 +43,9 @@ public class LargestPrimeFactorTests
     {
         const int number = 49;
         const long expected = 7L;
-        
+
         var result = LargestPrimeFactor.Solution(number);
-        
+
         Assert.Equal(expected, result);
     }
 
@@ -55,9 +55,9 @@ public class LargestPrimeFactorTests
         // 13195 = 5 * 7 * 13 * 29
         const int number = 13195;
         const long expected = 29L;
-        
+
         var result = LargestPrimeFactor.Solution(number);
-        
+
         Assert.Equal(expected, result);
     }
 
@@ -67,9 +67,9 @@ public class LargestPrimeFactorTests
         // 1024 = 2^10
         const int number = 1024;
         const long expected = 2L;
-        
+
         var result = LargestPrimeFactor.Solution(number);
-        
+
         Assert.Equal(expected, result);
     }
 
@@ -80,9 +80,9 @@ public class LargestPrimeFactorTests
         const int number = 1;
         // Current implementation returns -1 when no prime factors are found
         const long expected = -1L;
-        
+
         var result = LargestPrimeFactor.Solution(number);
-        
+
         Assert.Equal(expected, result);
     }
 
@@ -93,9 +93,9 @@ public class LargestPrimeFactorTests
         const int number = -7;
         // Current implementation returns -1 for negative input / no factors
         const long expected = -1L;
-        
+
         var result = LargestPrimeFactor.Solution(number);
-        
+
         Assert.Equal(expected, result);
     }
 }

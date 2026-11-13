@@ -14,7 +14,7 @@ public class PrimeGenerator
         }
 
         _lastPrime = candidate;
-        
+
         return candidate;
     }
 
@@ -25,12 +25,12 @@ public class PrimeGenerator
         {
             return false;
         }
-        
+
         if (number == 2)
         {
             return true;
         }
-        
+
         // Any even number bigger than two is not prime
         if (number % 2 == 0)
         {
