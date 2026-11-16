@@ -129,4 +129,26 @@ public class MultiplesOf3Or5Tests
         // Then: the result should be 0
         Assert.Equal(expectedSum, result);
     }
+
+    [Theory]
+    [InlineData(15, 45)]
+    [InlineData(16, 60)]
+    public void GivenAMultipleOfBothThreeAndFive_WhenCalculatingSum_ThenItIsCountedOnce(int range, int expectedSum)
+    {
+        // When
+        var result = MultiplesOf3Or5.Solution(range);
+
+        // Then
+        Assert.Equal(expectedSum, result);
+    }
+
+    [Fact]
+    public void GivenRangeOfFive_WhenCalculatingSum_ThenFiveItselfIsExcluded()
+    {
+        // When
+        var result = MultiplesOf3Or5.Solution(5);
+
+        // Then
+        Assert.Equal(3, result);
+    }
 }
