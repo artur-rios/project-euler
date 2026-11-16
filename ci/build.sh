@@ -1,6 +1,6 @@
 #!/bin/sh
 # The `build` check: restore, build the solution in Release and run its xunit tests
-# (tests/ArturRios.ProjectEuler.Tests). The problems project targets net8.0, the utils and the tests net10.0: the
+# (tests/ArturRios.ProjectEuler.Tests). The problems project, the utils and the tests all target net10.0: the
 # pinned .NET 10 SDK image builds all three and runs the tests on its .NET 10 runtime.
 #
 # yggdrasil.yml runs it in that image from the repository's root; by hand, from that root:
