@@ -12,7 +12,7 @@ checks:
     run: ci/lint.sh
 
   build:                                 # restore, build (Release) and run the xunit tests
-    # The .NET 10 SDK builds the net8.0 problems project (its reference pack comes from NuGet) next to the net10.0
-    # utils and tests; the tests run on the image's .NET 10 runtime.
+    # The .NET 10 SDK builds the problems project, the utils and the tests, all net10.0; the tests run on the
+    # image's .NET 10 runtime.
     image: mcr.microsoft.com/dotnet/sdk:10.0.404@sha256:fe0fd4e93bd2fbb47c883b7a6369e5c8d3db8bf01cdc5981f6ee35fbdf3ff4fb
     run: ci/build.sh
