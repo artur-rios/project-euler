@@ -101,4 +101,17 @@ public class LargestPrimeFactorTests
         // Then
         Assert.Equal(-1L, result);
     }
+
+    [Fact(Timeout = 10_000)]
+    public async Task GivenZero_WhenFindingLargestPrimeFactor_ThenReturnsMinusOne()
+    {
+        // Given: every prime divides zero, so it has no largest one; outside the problem, like one.
+        // The timeout fails the test instead of hanging the run if dividing out the twos never ends.
+
+        // When
+        var result = await Task.Run(() => LargestPrimeFactor.Solution(0), TestContext.Current.CancellationToken);
+
+        // Then
+        Assert.Equal(-1L, result);
+    }
 }
