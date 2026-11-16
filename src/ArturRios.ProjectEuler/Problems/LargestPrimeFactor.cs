@@ -9,6 +9,12 @@ public static class LargestPrimeFactor
     {
         long largestFactor = -1;
 
+        // Every prime divides zero, so it has no largest one: -1, as for one
+        if (number == 0)
+        {
+            return largestFactor;
+        }
+
         // Step 1: Remove factors of 2
         while (number % 2 == 0)
         {
