@@ -46,6 +46,21 @@ public class EvenFibonacciNumbersTests
     }
 
     [Theory]
+    [InlineData(1, 0)]
+    [InlineData(7, 2)]
+    [InlineData(33, 10)]
+    [InlineData(100, 44)]
+    [InlineData(143, 44)]
+    public void GivenALimitBelowTheNextEvenTerm_WhenCalculatingEvenFibonacciSum_ThenThatTermIsLeftOut(int limit, int expectedSum)
+    {
+        // When
+        var result = EvenFibonacciNumbers.Solution(limit);
+
+        // Then
+        Assert.Equal(expectedSum, result);
+    }
+
+    [Theory]
     [InlineData(0)]
     [InlineData(-5)]
     public void GivenALimitBelowTheFirstTerm_WhenCalculatingEvenFibonacciSum_ThenReturnsZero(int limit)
